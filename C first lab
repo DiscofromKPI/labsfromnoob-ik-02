@@ -1,5 +1,5 @@
-#include <stdio.h> //Запоминаем, что 1 и 0 это тру и фолс
-#include <stdlib.h> //exit
+#include <stdio.h> 
+#include <stdlib.h> 
 
 
 int roman(int, int, char);
@@ -11,12 +11,12 @@ int main() {
 
         printf("Type arabic number 1<a<30000 or 0 to exit: ");
 
-             // scanf Возвращает количество правильных введеных параметров //корректу присваивается результат выполнения функции сканф и возвращает его
-        while ((correct = scanf("%d", &a)) != 1      //если правильно введен сканф, то коррект = 1, если неправильно, то 0
+             // scanf Возвращает количество правильных введеных параметров 
+        while ((correct = scanf("%d", &a)) != 1      
                || a < 1
                || a > 30000) {
             fflush(stdin);       //очистка буфера входного буфера(пишешь фразу, оно очищает, можешь писать новую)
-            if (a == 0 && correct == 1)     //если я ввожу буквы, то коррект 0
+            if (a == 0 && correct == 1)     
                 exit(0);
             printf("Error, type a number from 1 to 30000!: ");
         }
