@@ -7,7 +7,7 @@ int main() {
         int counts = 0, c, error = 1, serror;
         double s = 0, e, n, p;
         char check_scan;
-        label: do {
+         do {
             printf("Enter the number of lines of system\n(Remeber that this is must be a number from 2 to 10):\n ");
             scanf("%d", &c);
             check_scan = getchar();
@@ -67,7 +67,7 @@ int main() {
             if(fabs(a[i][i]) < s) {
                 printf("Can not solve the system.\n");
                 error = 0;
-                goto label;
+                break;
             }
             s = 0;
         }
@@ -93,7 +93,7 @@ int main() {
             if (counts > 1500) {
                 printf("Has no solutions\n");
                 error = 0;
-                goto label;
+                break;
             }
             } while (p > e && (error != 0));
 
